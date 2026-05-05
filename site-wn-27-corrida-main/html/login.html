@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WN57</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'DM Sans', sans-serif;
+            background: linear-gradient(135deg, #ec9cbd, #f5a0c2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            width: 320px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff2d78;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border: 2px solid #ff2d78;
+            box-shadow: 0 0 8px rgba(255,45,120,0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff2d78;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e61f68;
+        }
+
+        .erro {
+            color: red;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .link {
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .link a {
+            color: #ff2d78;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Entrar</h1>
+
+    <form id="loginForm">
+        <input type="email" id="emailLogin" placeholder="E-mail" required>
+        <input type="password" id="senhaLogin" placeholder="Senha" required>
+
+        <button type="submit">Login</button>
+
+        <div class="erro" id="erro"></div>
+    </form>
+
+    <div class="link">
+        Não tem conta? <a href="/html/cadastro.html">Cadastre-se</a>
+    </div>
+</div>
+
+<script src="/javascript/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,664 @@
+:root {
+  --pink: #FF2D78;
+  --pink-light: #e0e0e0;
+  --pink-pale: #FFE6EF;
+  --black: #0D0D0D;
+  --dark: #1A1A1A;
+  --card-bg: #1E1E1E;
+  --text-muted: #888;
+  --white: #FFFFFF;
+  --radius: 18px;
+  --shadow: 0 8px 40px rgba(255, 45, 120, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #de80a4;
+  color: var(--white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── Background Glow ─────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(255, 45, 120, 0.13) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── NAVEGAÇAO ────────────────────────────── */
+nav {
+  position: relative;
+  z-index: 10;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(16px);
+}
+
+/* ── logo ────────────────────────────── */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent;
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 500;
+  letter-spacing: .5px;
+  transition: color .25s;
+}
+
+.nav-links a:hover {
+  color: var(--pink-light);
+}
+
+.btn-nav {
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .88rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(255, 45, 120, .35);
+}
+
+.btn-nav:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255, 45, 120, .5);
+}
+
+/* painel de informaçoes */
+
+/* Painel */
+#panel {
+  position: absolute;
+  height: 230px;
+  bottom: 20px;
+  left: 85%;
+  transform: translateX(-50%);
+  width: 113%;
+  max-width: 358px;
+  backdrop-filter: blur(-6px);
+  padding: 31px 22px;
+  box-sizing: border-box;
+  border-radius: 30px 32px 0 0;
+  font-size: 43px;
+  transition: all 0.3s ease;
+  z-index: 1026;
+}
+
+/* ── mapa com api gratis───────────────── */
+#map {
+  height: 342px;
+  width: 100%;
+}
+
+/* estilizaçao da fonte */
+#panel h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-top: -3px;
+  font-size: 29px;
+  color: #412a2a;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+
+}
+
+/* cores do botao de pagamento e animaçoes */
+#panel select {
+  width: 100%;
+  margin-top: 17px;
+  padding: 18px;
+  border-radius: 15px;
+  border: none;
+  font-size: 17px;
+  outline: none;
+  background: #dadae052;
+  color: #232222;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#panel select:hover {
+  background: rgba(255, 182, 193, 0.35);
+}
+
+
+/* estilizaçao dos botoes */
+#panel button {
+  width: 100%;
+  height: 30px;
+  width: 266px;
+  margin-top: 38px;
+  padding: 8px;
+  border-radius: 32px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  color: #f2f2f2;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
+}
+
+
+
+#panel button:hover {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+}
+
+
+/* Painel dos carros */
+#carInfo {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+#carInfo p {
+  margin: 6px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#carInfo strong {
+  color: #f3f3f3;
+}
+
+@media (max-width: 480px) {
+  #panel {
+    width: 100%;
+    padding: 18px 15px;
+  }
+
+  #panel h2 {
+    font-size: 20px;
+  }
+
+  #panel button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+
+
+
+/* ── ROTA CALCUL ───────────────── */
+.route-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 28px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: var(--shadow);
+  animation: fadeUp .8s .4s ease both;
+}
+
+.route-label {
+  font-size: .72rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--pink-light);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.input-row {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: border-color .25s;
+}
+
+.input-group:focus-within {
+  border-color: var(--pink);
+  background: rgba(255, 45, 120, 0.06);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot.origin {
+  background: var(--pink-light);
+}
+
+.dot.dest {
+  background: var(--pink);
+  box-shadow: 0 0 8px var(--pink);
+}
+
+.connector {
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, var(--pink-light), var(--pink));
+  margin: 4px 0 4px 22px;
+  border-radius: 2px;
+  opacity: .5;
+}
+
+.input-group input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .93rem;
+  font-weight: 400;
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.route-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.btn-calc {
+  flex: 1;
+  background: linear-gradient(135deg, var(--pink) 0%, #c4175a 100%);
+  color: var(--white);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .93rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity .2s, transform .15s, box-shadow .2s;
+  box-shadow: 0 6px 24px rgba(255, 45, 120, .35);
+}
+
+.btn-calc:hover {
+  opacity: .92;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(255, 45, 120, .5);
+}
+
+.btn-calc:active {
+  transform: translateY(0);
+}
+
+.btn-schedule {
+  background: #FFE6EF;
+  background-color: #c4175a;
+  color: var(--pink-light);
+  border: 1px solid rgba(245, 245, 245, 0.2);
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .88rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.btn-schedule:hover {
+  background: rgba(255, 177, 177, 0.08);
+  border-color: var(--pink-light);
+}
+
+
+.result-divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── BOTTOM CAR MENU ────────────────── */
+.bottom-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: -30px;
+  z-index: 31;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.96) 18%, var(--dark) 100%);
+  padding: 4px 0 0px;
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.bottom-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.bottom-title span {
+  color: var(--pink);
+  font-style: italic;
+}
+
+.sort-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.pill {
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: .74rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  transition: all .2s;
+}
+
+.pill.active,
+.pill:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
+}
+
+/* ── SCROLL TRACK ───────────────────── */
+.cars-track {
+  display: flex;
+  gap: 19px;
+  background: #cccccc;
+  padding: 8px 36px 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+
+.cars-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── CAR CARD ───────────────────────── */
+.car-card {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  background: var(--card-bg);
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 16px 18px;
+  min-width: 150px;
+  cursor: pointer;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.car-img {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+.car-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 45, 120, 0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.car-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 45, 120, .45);
+  box-shadow: 0 12px 32px rgba(255, 45, 120, .2);
+}
+
+.car-card:hover::before {
+  opacity: 1;
+}
+
+.car-card.selected {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 2px rgba(255, 45, 120, .3), 0 12px 32px rgba(255, 45, 120, .25);
+}
+
+.car-card.selected::before {
+  opacity: 1;
+}
+
+.car-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 45, 120, .15);
+  border: 1px solid rgba(255, 45, 120, .3);
+  color: var(--pink-light);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.car-img {
+  font-size: 2.6rem;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(255, 45, 120, .25));
+  transition: transform .3s;
+}
+
+.car-card:hover .car-img {
+  transform: scale(1.08) translateX(4px);
+}
+
+.car-name {
+  font-weight: 600;
+  font-size: .9rem;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.car-price {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.car-price .amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--pink-light);
+}
+
+.car-price .currency {
+  font-size: .72rem;
+  color: var(--text-muted);
+}
+
+.car-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.car-meta span {
+  font-size: .7rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.car-meta .dot-mini {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Scroll hint arrow */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 24px;
+  margin-top: 6px;
+  font-size: .7rem;
+  color: rgba(37, 33, 33, 0.2);
+  user-select: none;
+}
+
+/* ── ANIMATIONS ─────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(190, 35, 89, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(189, 181, 183, 0);
+  }
+}
+
+.dot.dest {
+  animation: pulse-dot 2s infinite;
+}
+
+/* ── FLOATING STATS ─────────────────── */
+.stats-row {
+  display: flex;
+  gap: 48px;
+  margin-top: 48px;
+  justify-content: center;
+  animation: fadeUp .8s .5s ease both;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--pink-light);
+}
+
+.stat .desc {
+  font-size: .73rem;
+  color: var(--text-muted);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+/* ── RESPONSIVE ─────────────────────── */
+@media (max-width: 600px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 40px 16px 200px;
+  }
+
+  .stats-row {
+    gap: 28px;
+  }
+
+  .bottom-header {
+    padding: 0 16px 14px;
+  }
+
+  .cars-track {
+    padding: 4px 16px 8px;
+  }
+}
