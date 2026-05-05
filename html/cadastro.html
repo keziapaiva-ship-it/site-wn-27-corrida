@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro Cliente - Objetivo principla - WN57</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+
+    <!--fonte-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- menu -->
+    <nav>
+        <div class="logo">WN</div>
+        <ul class="nav-links">
+            <li><a href="/html/solicitar.html">viajar</a></li>
+            <li><a href="/html/corrida.html">atividade</a></li>
+            <li><a href="/html/login.html">entrar</a></li>
+        </ul>
+        <button class="btn-nav"><a href="/html/cadastro.html">cadastre-se</a></button>
+    </nav>
+    </div>
+
+    <body>
+        <!--cadastro -->
+        <div class="container">
+            <main>
+                <section class="sessao">
+                    <form action="/enviar-dados" method="post">
+
+                        <h1>Qual é seu número de telefone ou e-mail?</h1>
+                        <div class="informacoes">
+                            <div class="nome">
+                                <label for="nome">Nome completo</label>
+                                <input type="text" placeholder="Nome" id="nome" name="nome" required>
+                            </div>
+
+                            <div class="email">
+                                <label for="email">E-mail</label>
+                                <input type="email" placeholder="E-mail" id="email" name="email" required>
+                            </div>
+
+                            <div class="date">
+                                <label for="date">Data</label>
+                                <input type="date" placeholder="00/00/0000" id="date" name="" required>
+                            </div>
+
+                            <div class="telefone">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" placeholder="(11) 99999-9999" id="telefone" name="telefone" required>
+                            </div>
+                            <div class="senha">
+                                <label for="senha">Senha</label>
+                                <input type="password" placeholder="Digite sua senha" id="senha" name="senha" required>
+                            </div>
+
+                            <div class="confirmacao-Senha">
+                                <label for="confirmacao-Senha">Confirmar senha</label>
+                                <input type="password" placeholder="Confirme sua senha" id="confirmacao-Senha"
+                                    name="confirmacao-Senha" required>
+                                
+                            </div>
+                        </div>
+
+
+                        <!--botao do google -->
+
+                        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+                        <div id="g_id_onload"
+                            data-client_id="86008452356-253qos5sqh3t35olmsdkqekkp06kgrs2.apps.googleusercontent.com"
+                            data-callback="handleCredentialResponse" data-auto_select="false" data-itp_support="true">
+                        </div>
+
+                        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                            data-text="sign_in_with" data-shape="pill">
+                        </div>
+                        </head>
+
+                        <div class="confirmar"><button type="submit" style="cursor: pointer;">Confirmar</button>
+                        </div>
+
+                        <script src="/javascript/cadastro.js"></script>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+
+    <!--fundo rosa gradient -->
+
+    <body style="
+  background: linear-gradient(135deg, #ec9cbd, #f5a0c2);
+  margin:0;
+"></body>
+
+    <!-- estilizaçao da sombra atras o bloco de destino -->
+    <div class="route-card">
+    </div>
+
+
+</html>
