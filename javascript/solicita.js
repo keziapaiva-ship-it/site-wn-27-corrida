@@ -13,6 +13,21 @@ function solicitarCorrida() {
   window.location.href = "/html/corrida.html";
 }
 
+function irPagamento() {
+  const origem = document.getElementById("origem").value;
+  const destino = document.getElementById("destino").value;
+
+  if (!origem || !destino) {
+    alert("Preencha origem e destino");
+    return;
+  }
+
+  localStorage.setItem("origem", origem);
+  localStorage.setItem("destino", destino);
+
+  window.location.href = "/html/pagamento.html";
+}
+
 function pegarGPS() {
   const origem = document.getElementById("origem");
 
