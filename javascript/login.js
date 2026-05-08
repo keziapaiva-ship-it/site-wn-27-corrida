@@ -1,7 +1,7 @@
 const form = document.getElementById("loginForm");
-const emailLogin = document.getElementById("emailLogin");
-const senhaLogin = document.getElementById("senhaLogin");
-const erro = document.getElementById("erro");
+const emailLogin = document.getElementById("email");
+const senhaLogin = document.getElementById("senha");
+const erro = document.getElementById("erroLogin");
 
 
 
@@ -13,7 +13,7 @@ if (user) {
 
 function logout() {
     localStorage.removeItem("usuarioLogado");
-    location.href = "/html/index.html";
+    location.href = "/html/solicitar.html";
 }
 
 
@@ -31,9 +31,9 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
     localStorage.setItem("usuario", JSON.stringify(usuario));
 
-    alert("Cadastro realizado com sucesso!");
+    alert("Login realizado com sucesso!");
 
-    window.location.href = "/html/login.html";
+    window.location.href = "/html/solicitar.html";
 });
 
 
