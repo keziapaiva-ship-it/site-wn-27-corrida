@@ -102,9 +102,11 @@ form.addEventListener("submit", function (e) {
 //nao ver a senha//
 const toggleSenha = document.getElementById("toggleSenha");
 
-toggleSenha.addEventListener("click", () => {
-  const tipo = senha.type === "password" ? "text" : "password";
-  senha.type = tipo;
+if (toggleSenha) {
+  toggleSenha.addEventListener("click", () => {
+    const tipo = senha.type === "password" ? "text" : "password";
+    senha.type = tipo;
 
-  toggleSenha.textContent = tipo === "password" ? "👁" : "👁‍🗨";
-});
+    toggleSenha.textContent = tipo === "password" ? "👁" : "👁‍🗨";
+  });
+}

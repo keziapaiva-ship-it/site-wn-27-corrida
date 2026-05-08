@@ -224,3 +224,18 @@ form {
     flex-direction: column;
     gap: 16px;
 }
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    nav {
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    main {
+        margin: 20px 10px 0;
+        padding: 30px;
+    }
+}

@@ -70,13 +70,18 @@ nav {
     color: #ff2d78;
 }
 
+nav .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
 nav .nav-links a {
     color: #fff !important;
     text-decoration: none;
     font-size: 0.9rem;
     opacity: 0.9;
     transition: 0.3s;
-    gap: 30px;
 }
 
 nav .nav-links a:hover {
@@ -311,5 +316,28 @@ input:focus {
 
     100% {
         transform: translateY(0px);
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+    nav {
+        padding: 0 16px;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .linha {
+        flex-direction: column;
     }
 }

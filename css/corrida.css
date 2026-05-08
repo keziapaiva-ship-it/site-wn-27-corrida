@@ -299,3 +299,22 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   font-family: Arial;
 }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  nav {
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .cars {
+    gap: 20px;
+  }
+
+  .car {
+    min-width: 150px;
+  }
+}
