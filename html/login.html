@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>login</title>
+    <body style="background: linear-gradient(135deg, #ec9cbd, #f5a0c2); margin:0;"></body>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section>
+            <h1 class="titulo">Entrar</h1>
+            <form action="/enviar-dados" method="post">  
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" placeholder="Digite sua senha" id="senha" name="senha" required>
+                
+                <button type="submit" style="cursor: pointer;"><a href="/html/solicitar.html">viajar</a></button>
+            </form>
+
+        </section>
+    </main>
+    <script src="/javascript/login.js"></script>
+</body>
+</html>
