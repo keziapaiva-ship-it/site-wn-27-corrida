@@ -1,0 +1,325 @@
+/* ─────────────────────────────
+   RESET GERAL
+───────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ─────────────────────────────
+   BODY
+───────────────────────────── */
+body {
+    min-height: 100vh;
+    background-color: #eba1c0;
+    padding-top: 90px;
+    /* espaço pro menu fixo */
+}
+
+/* ─────────────────────────────
+   NAV (MENU TOPO)
+───────────────────────────── */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+
+
+}
+
+/* LOGO */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: #ff2d78;
+}
+
+/* LINKS */
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    color: var(--pink-light);
+}
+
+/* BOTÃO NAV */
+.btn-nav {
+    background: var(--pink);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-links a {
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff2d78;
+}
+
+.nav-links a:active,
+.nav-links a:focus {
+    color: #ffcece;
+}
+.a{
+    background-color: #fff;
+}
+
+/* ─────────────────────────────
+   CONTAINER DO LOGIN
+───────────────────────────── */
+main {
+    width: 100%;
+    max-width: 750px;
+    /* tamanho maior */
+    margin: 60px auto 0;
+
+    background-color: #fcfcfc;
+    box-shadow: 0 10px 30px rgba(255, 248, 248, 0.2);
+    border-radius: 16px;
+
+    padding: 50px;
+}
+
+/* ─────────────────────────────
+   FORMULÁRIO
+───────────────────────────── */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #000;
+    border-radius: -5px;
+    font-size: 17px;
+    transition: 0.3s;
+    border: 1px solid #000 !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 45, 120, 0.25);
+    transform: scale(0.95);
+}
+
+form input:focus {
+    transform: scale(1.01);
+    box-shadow: 0 0 8px rgba(255, 4, 108, 0.7);
+}
+
+form button {
+    padding: 17px;
+    border-radius: 10px;
+    background: #f74caa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #f74caa;
+    transform: translateY(-2px);
+}
+
+/* ─────────────────────────────
+   CARD (caso use outra tela)
+───────────────────────────── */
+.card {
+    width: 380px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* ─────────────────────────────
+   INPUT GERAL
+───────────────────────────── */
+input {
+    color: #000000;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: #333;
+}
+
+
+main {
+    width: 100%;
+    max-width: 669px;
+    margin: 89px auto 0;
+    background: #fff;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    animation: fadeUp 0.6s ease;
+}
+
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ANIMAÇÃO HEADER */
+header{
+    animation: menuTop 1s ease;
+}
+
+/* LOGO */
+.logo{
+    animation: logoFade 1.2s ease;
+}
+
+/* LINKS */
+nav a{
+    opacity:0;
+    animation: navFade .8s ease forwards;
+}
+
+/* delay em cada link */
+nav a:nth-child(1){
+    animation-delay:0.2s;
+}
+
+nav a:nth-child(2){
+    animation-delay:0.35s;
+}
+
+nav a:nth-child(3){
+    animation-delay:0.5s;
+}
+
+nav a:nth-child(4){
+    animation-delay:0.65s;
+}
+
+nav a:nth-child(5){
+    animation-delay:0.8s;
+}
+
+/* BOTÃO */
+.btn-menu{
+    opacity:0;
+    animation: buttonFade 1s ease forwards;
+    animation-delay:1s;
+}
+
+
+/* ===== ANIMAÇÕES ===== */
+
+/* menu descendo */
+@keyframes menuTop{
+    from{
+        opacity:0;
+        transform:translateY(-80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* logo aparecendo */
+@keyframes logoFade{
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* links */
+@keyframes navFade{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* botão */
+@keyframes buttonFade{
+    from{
+        opacity:0;
+        transform:translateX(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - WN</title>
+
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="background: linear-gradient(135deg, #ec9cbd, #f5a0c2);margin:0;">
+
+<!-- NAV -->
+<nav>
+    <div class="logo">WN</div>
+    <ul class="nav-links">
+        <li><a href="/html/solicitar.html">viajar</a></li>
+        <li><a href="/html/corrida.html">atividade</a></li>
+        <li><a href="/html/login.html">entrar</a></li>
+    </ul>
+    <button class="btn-nav">
+        <a href="/html/cadastro.html">cadastre-se</a>
+    </button>
+</nav>
+
+    <div class="background"></div>
+
+    <main class="container">
+
+        <section class="login-box">
+
+            <header class="login-header">
+                <h1>WN</h1>
+                <p class="sub">Entre para continuar sua viagem</p>
+            </header>
+  <p></p>
+            <form id="loginForm">
+
+                <div class="input-box">
+                  
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" autocomplete="email"
+                        required>
+                </div>
+
+                <div class="input-box">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha"
+                        autocomplete="current-password" required>
+                </div>
+
+                <button type="submit" class="btn">
+                    <a href="/html/solicitar.html">Entrar</a>
+                </button>
+
+                <p id="erroLogin" class="erro"></p>
+
+            </form>
+
+            <footer class="login-footer">
+                <p class="link">
+                    Não tem conta?
+                    <a href="/html/cadastro.html">Criar conta</a>
+                </p>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="/javascript/login.js"></script>
+
+</body>
+
+</html>

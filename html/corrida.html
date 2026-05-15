@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>solicite sua viagem</title>
+  <link rel="stylesheet" href="/css/corrida.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+
+  <!-- ══ NAV ══════════════════════════════════════ -->
+  <nav>
+    <div class="logo">WN</div>
+    <ul class="nav-links">
+      <a href="/html/inicial.html">inicial</a>
+      <a href="/html/solicitar.html">viajar</a>
+      <a href="/html/corrida.html">atividade</a>
+      <a href="/html/login.html">entrar</a>
+      <a href="#">ajuda</a>
+    </ul>
+    <button class="btn-nav">cadastre-se</button>
+  </nav>
+
+<input id="origem" placeholder="Ex: Pinhais">
+<input id="destino" placeholder="Ex: Curitiba">
+
+<button onclick="irMapa()">Confirmar</button>
+
+<script>
+function irMapa(){
+
+  localStorage.setItem("origem", document.getElementById("origem").value);
+  localStorage.setItem("destino", document.getElementById("destino").value);
+
+  window.location.href = "mapa.html";
+
+}
+</script>
+
+    <div id="map"></div>
+    <div class="map"></div>
+
+    <!-- MENU -->
+  
+    <div class="bottom-menu">
+
+      <div class="cars">
+
+        <!-- ITEM -->
+
+        <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(3) brightness(1.6);">
+
+          <h3>WN</h3>
+
+          <div class="price">R$6,20</div>
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN Confort</h3>
+
+          <div class="price">R$7,40</div>
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN PCD</h3>
+
+          <div class="price">R$18,98</div>
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN Pets</h3>
+
+          <div class="price">R$13,30</div>
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN Black</h3>
+
+          <div class="price">R$20,10</div>
+        </div>
+
+        <!-- ITEM -->
+
+        <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN Vip</h3>
+
+          <div class="price">R$8,30</div>
+        </div>
+
+         <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN moto</h3>
+
+          <div class="price">R$9,30</div>
+        </div>
+
+        
+         <div class="car">
+          <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png"
+            style="width:80px; filter:hue-rotate(300deg) saturate(2) brightness(1.6);">
+
+          <h3>WN moto pet</h3>
+
+          <div class="price">R$40,30</div>
+        </div>
+
+      </div>
+
+      <button class="confirm">
+        Confirmar
+      </button>
+
+    </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/javascript/corrida.js"></script>
+
+</body>
+
+</html>
